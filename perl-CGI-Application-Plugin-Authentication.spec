@@ -1,15 +1,16 @@
-%define module   CGI-Application-Plugin-Authentication
-%define version    0.13
-%define release    %mkrel 1
+%define upstream_name    CGI-Application-Plugin-Authentication
+%define upstream_version 0.13
 
-Name:       perl-%{module}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:    Authentication framework for CGI::Application
-Source:     http://www.cpan.org/modules/by-module/CGI/%{module}-%{version}.tar.gz
-Url:        http://search.cpan.org/dist/%{module}
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/CGI/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(Attribute::Handlers)
 BuildRequires: perl(CGI::Application)
 BuildRequires: perl(CGI::Cookie)
@@ -24,7 +25,7 @@ BuildRequires: perl(UNIVERSAL::require)
 BuildRequires: perl(Module::Build::Compat)
 BuildRequires: perl(CGI::Application::Plugin::Session)
 BuildArch: noarch
-BuildRoot:  %{_tmppath}/%{name}-%{version}
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 CGI::Application::Plugin::Authentication adds the ability to authenticate
@@ -47,7 +48,7 @@ Choosing a Driver
     cover everyone's needs. 
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -68,5 +69,3 @@ rm -rf %buildroot
 %doc Changes README
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
-
