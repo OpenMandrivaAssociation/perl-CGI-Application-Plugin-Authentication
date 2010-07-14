@@ -1,5 +1,5 @@
 %define upstream_name    CGI-Application-Plugin-Authentication
-%define upstream_version 0.17
+%define upstream_version 0.18
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -20,10 +20,13 @@ BuildRequires: perl(MIME::Base64)
 BuildRequires: perl(Scalar::Util)
 BuildRequires: perl(Test::Exception)
 BuildRequires: perl(Test::More)
+BuildRequires: perl(Test::Regression)
+BuildRequires: perl(Test::Taint)
 BuildRequires: perl(Test::Warn)
 BuildRequires: perl(UNIVERSAL::require)
 BuildRequires: perl(Module::Build::Compat)
 BuildRequires: perl(CGI::Application::Plugin::Session)
+
 BuildArch: noarch
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
