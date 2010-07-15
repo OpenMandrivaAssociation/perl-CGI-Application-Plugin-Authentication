@@ -21,7 +21,7 @@ BuildRequires: perl(Scalar::Util)
 BuildRequires: perl(Task::Weaken)
 BuildRequires: perl(Test::Exception)
 BuildRequires: perl(Test::MockObject)
-BuildRequires: perl(Test::More) >= 0.950.0
+BuildRequires: perl(Test::More) >= 0.940.0
 BuildRequires: perl(Test::Regression)
 BuildRequires: perl(Test::Taint)
 BuildRequires: perl(Test::Warn)
