@@ -1,2 +1,4 @@
+removed_sources:
+  CGI-Application-Plugin-Authentication-0.18.tar.gz: 3fbb95ed601125d0ab3fc95c6e1fb073ee2ca7c6
 sources:
-  "CGI-Application-Plugin-Authentication-0.18.tar.gz": 3fbb95ed601125d0ab3fc95c6e1fb073ee2ca7c6
+  CGI-Application-Plugin-Authentication-0.20.tar.gz: c92a46b16d8059be402ec06fe2383566bcb642ae
