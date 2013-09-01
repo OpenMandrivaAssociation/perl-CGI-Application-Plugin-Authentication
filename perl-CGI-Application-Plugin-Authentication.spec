@@ -2,14 +2,14 @@
 %define upstream_version 0.20
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version 0.20
+Version:	%perl_convert_version %{upstream_version}
 Release:	1
 
 Summary:	Authentication framework for CGI::Application
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/CGI/CGI-Application-Plugin-Authentication-0.20.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/CGI/CGI-Application-Plugin-Authentication-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Attribute::Handlers)
