@@ -1,17 +1,20 @@
 %define upstream_name    CGI-Application-Plugin-Authentication
-%define upstream_version 0.18
+%define upstream_version 0.20
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Release:	1
 
 Summary:	Authentication framework for CGI::Application
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/CGI/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/CGI/CGI-Application-Plugin-Authentication-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
+BuildRequires: perl(Test::NoWarnings)
+BuildRequires: perl(Readonly)
+BuildRequires: perl(Digest::SHA)
 BuildRequires:	perl(Attribute::Handlers)
 BuildRequires:	perl(CGI::Application)
 BuildRequires:	perl(CGI::Cookie)
@@ -120,4 +123,5 @@ make test
 
 * Thu Oct 09 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.12-1mdv2009.1
 - initial mdv release, generated with cpan2dist
+
 
