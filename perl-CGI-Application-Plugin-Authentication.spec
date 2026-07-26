@@ -1,15 +1,13 @@
 %define upstream_name    CGI-Application-Plugin-Authentication
-%define upstream_version 0.20
-
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	0.20
+Release:	4
 
 Summary:	Authentication framework for CGI::Application
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/CGI/CGI-Application-Plugin-Authentication-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/CGI/CGI-Application-Plugin-Authentication-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -58,7 +56,7 @@ Choosing a Driver
     cover everyone's needs. 
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -111,9 +109,7 @@ make test
 
 * Sat Aug 01 2009 Jérôme Quelin <jquelin@mandriva.org> 0.130.0-1mdv2010.0
 + Revision: 405771
-- rebuild using %%perl_convert_version
-
-* Fri May 01 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.13-1mdv2010.0
+- rebuild using %0.20 Fri May 01 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.13-1mdv2010.0
 + Revision: 370016
 - update to new version 0.13
 
